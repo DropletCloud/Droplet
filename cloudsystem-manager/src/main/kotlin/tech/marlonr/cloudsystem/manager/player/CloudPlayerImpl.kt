@@ -19,7 +19,15 @@ class CloudPlayerImpl(
         return name
     }
 
+    override fun getCurrentProxy(): ICloudInstance {
+        TODO("Not yet implemented")
+    }
+
     override fun getCurrentServer(): ICloudInstance {
+        TODO("Not yet implemented")
+    }
+
+    override fun getCurrentProxyAsync(): CompletableFuture<ICloudInstance> {
         TODO("Not yet implemented")
     }
 
@@ -27,7 +35,31 @@ class CloudPlayerImpl(
         TODO("Not yet implemented")
     }
 
+    override fun getIpAddress(): String {
+        TODO("Not yet implemented")
+    }
+
     override fun getCustomProperties(): HashMap<String, String> {
         return customProperties
+    }
+
+    override fun sendMessage(message: String?) {
+        TODO("Not yet implemented")
+    }
+
+    override fun sendMiniMessage(miniMessage: String?) {
+        TODO("Not yet implemented")
+    }
+
+    override fun kick(message: String?) {
+        TODO("Not yet implemented")
+    }
+
+    override fun sendToInstance(serverName: String?) {
+        TODO("Not yet implemented")
+    }
+
+    override fun sendToInstance(instance: ICloudInstance?) {
+        TODO("Not yet implemented")
     }
 }

@@ -10,8 +10,15 @@ public interface ICloudPlayer {
     UUID getUUID();
     String getPlayerName();
 
+    ICloudInstance getCurrentProxy();
     ICloudInstance getCurrentServer();
+    CompletableFuture<ICloudInstance> getCurrentProxyAsync();
     CompletableFuture<ICloudInstance> getCurrentServerAsync();
-
+    String getIpAddress();
     HashMap<String, String> getCustomProperties();
+    void sendMessage(String message);
+    void sendMiniMessage(String miniMessage);
+    void kick(String message);
+    void sendToInstance(String serverName);
+    void sendToInstance(ICloudInstance instance);
 }

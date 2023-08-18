@@ -9,7 +9,7 @@ class CloudPlayerImpl(
     val uuid: UUID,
     val name: String
 ): ICloudPlayer {
-    val customProperties = hashMapOf<String, String>()
+    @get:JvmName("kotlinGetCustomProperties") val customProperties = hashMapOf<String, String>()
 
     override fun getUUID(): UUID {
         return uuid

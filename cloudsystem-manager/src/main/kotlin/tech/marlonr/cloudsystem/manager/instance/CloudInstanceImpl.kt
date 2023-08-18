@@ -13,7 +13,7 @@ class CloudInstanceImpl(
     private val nodeName: String,
     private val group: ICloudGroup?
 ): ICloudInstance {
-    val customProperties = hashMapOf<String, String>()
+    @get:JvmName("kotlinGetCustomProperties") val customProperties = hashMapOf<String, String>()
 
     override fun getName(): String {
         return name

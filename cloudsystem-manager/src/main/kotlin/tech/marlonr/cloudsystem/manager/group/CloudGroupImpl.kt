@@ -3,8 +3,8 @@ package tech.marlonr.cloudsystem.manager.group
 import tech.marlonr.cloudsystem.api.group.ICloudGroup
 
 class CloudGroupImpl(
-    val name: String,
-    var minOnlineCount: Int
+    @get:JvmName("kotlinGetName") val name: String,
+    @get:JvmName("kotlinGetMinOnlineCount") var minOnlineCount: Int
 ): ICloudGroup {
 
     override fun getName(): String {

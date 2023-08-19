@@ -1,4 +1,4 @@
-package tech.marlonr.cloudsystem.manager.ktor.routes.params
+package tech.marlonr.cloudsystem.library.kotlin.ktor.params
 
 import kotlinx.serialization.Serializable
 

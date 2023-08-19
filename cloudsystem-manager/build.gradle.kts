@@ -12,6 +12,7 @@ repositories {
 
 dependencies {
     implementation(project(":cloudsystem-api"))
+    implementation(project(":cloudsystem-library"))
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0-RC")
 
     implementation("io.ktor:ktor-server-core-jvm:2.3.3")

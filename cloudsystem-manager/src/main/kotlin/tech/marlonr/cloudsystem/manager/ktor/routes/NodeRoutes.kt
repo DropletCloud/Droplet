@@ -5,7 +5,7 @@ import io.ktor.server.auth.*
 import io.ktor.server.request.*
 import io.ktor.server.routing.*
 import tech.marlonr.cloudsystem.api.CloudAPI
-import tech.marlonr.cloudsystem.manager.ktor.routes.params.RegisterNodeParams
+import tech.marlonr.cloudsystem.library.kotlin.ktor.params.RegisterNodeParams
 import tech.marlonr.cloudsystem.manager.node.CloudNodeImpl
 
 fun Application.configureNodeRoutes() {
@@ -25,7 +25,6 @@ fun Application.configureNodeRoutes() {
                 }
                 post("/{name}/unregister") {
                     val name = call.parameters["name"]
-
                     CloudAPI.getInstance().cloudNodeProvider.unregisterNode(name!!)
                 }
             }

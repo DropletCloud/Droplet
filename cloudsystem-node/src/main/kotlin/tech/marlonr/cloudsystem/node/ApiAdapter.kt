@@ -1,30 +1,26 @@
-package tech.marlonr.cloudsystem.manager
+package tech.marlonr.cloudsystem.node
 
 import tech.marlonr.cloudsystem.api.CloudAPI
 import tech.marlonr.cloudsystem.api.group.ICloudGroupProvider
 import tech.marlonr.cloudsystem.api.instance.ICloudInstanceProvider
 import tech.marlonr.cloudsystem.api.node.ICloudNodeProvider
 import tech.marlonr.cloudsystem.api.player.ICloudPlayerProvider
-import tech.marlonr.cloudsystem.manager.group.CloudGroupProviderImpl
-import tech.marlonr.cloudsystem.manager.instance.CloudInstanceProviderImpl
-import tech.marlonr.cloudsystem.manager.node.CloudNodeProviderImpl
-import tech.marlonr.cloudsystem.manager.player.CloudPlayerProviderImpl
 
 class ApiAdapter: CloudAPI() {
 
     override fun getGroupProvider(): ICloudGroupProvider {
-        return CloudGroupProviderImpl()
+        TODO("Not yet implemented")
     }
 
     override fun getInstanceProvider(): ICloudInstanceProvider {
-        return CloudInstanceProviderImpl()
+        TODO("Not yet implemented")
     }
 
     override fun getCloudPlayerProvider(): ICloudPlayerProvider {
-        return CloudPlayerProviderImpl()
+        TODO("Not yet implemented")
     }
 
     override fun getCloudNodeProvider(): ICloudNodeProvider {
-        return CloudNodeProviderImpl()
+        TODO("Not yet implemented")
     }
 }

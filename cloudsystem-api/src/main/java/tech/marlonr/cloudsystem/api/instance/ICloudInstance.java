@@ -2,7 +2,6 @@ package tech.marlonr.cloudsystem.api.instance;
 
 import org.jetbrains.annotations.Nullable;
 import tech.marlonr.cloudsystem.api.group.ICloudGroup;
-
 import java.util.HashMap;
 import java.util.concurrent.CompletableFuture;
 

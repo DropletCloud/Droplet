@@ -1,5 +1,6 @@
 package tech.marlonr.cloudsystem.manager.node
 
+import tech.marlonr.cloudsystem.api.CloudAPI
 import tech.marlonr.cloudsystem.api.instance.ICloudInstance
 import tech.marlonr.cloudsystem.api.node.ICloudNode
 
@@ -37,6 +38,6 @@ class CloudNodeImpl(
     }
 
     override fun disconnect() {
-        TODO("Not yet implemented")
+        CloudAPI.getInstance().cloudNodeProvider.unregisterNode(this)
     }
 }

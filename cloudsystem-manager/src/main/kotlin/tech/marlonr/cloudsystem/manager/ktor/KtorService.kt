@@ -1,9 +1,12 @@
 package tech.marlonr.cloudsystem.manager.ktor
 
+import io.ktor.serialization.kotlinx.json.*
+import io.ktor.server.application.*
 import io.ktor.server.application.*
 import io.ktor.server.auth.*
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*
+import io.ktor.server.plugins.contentnegotiation.*
 import tech.marlonr.cloudsystem.manager.utils.config.CloudConfigManager
 
 class KtorService(private val host: String, private val port: Int = 8080) {
@@ -14,5 +17,9 @@ class KtorService(private val host: String, private val port: Int = 8080) {
 }
 
 fun Application.module() {
+    install(ContentNegotiation) {
+        json(tech.marlonr.cloudsystem.manager.utils.json)
+    }
+
     configureAuth()
 }

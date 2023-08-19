@@ -6,27 +6,31 @@ import java.util.concurrent.CompletableFuture
 
 class CloudInstanceProviderImpl: ICloudInstanceProvider {
 
-    override fun getInstanceByName(name: String): ICloudInstance {
-        TODO("Not yet implemented")
+    val onlineInstances = hashMapOf<String, ICloudInstance>()
+
+    override fun getInstanceByName(name: String): ICloudInstance? {
+        return onlineInstances[name]
     }
 
-    override fun getInstanceByNameAsync(): CompletableFuture<ICloudInstance> {
-        TODO("Not yet implemented")
+    override fun getInstanceByNameAsync(name: String): CompletableFuture<ICloudInstance?> {
+        return CompletableFuture.completedFuture(onlineInstances[name])
     }
 
     override fun getInstances(): MutableList<ICloudInstance> {
-        TODO("Not yet implemented")
+        return onlineInstances.values.toMutableList()
     }
 
     override fun getInstancesAsync(): CompletableFuture<MutableList<ICloudInstance>> {
-        TODO("Not yet implemented")
+        return CompletableFuture.completedFuture(onlineInstances.values.toMutableList())
     }
 
-    override fun registerInstance(cloudInstance: ICloudInstance?) {
-        TODO("Not yet implemented")
+    override fun registerInstance(cloudInstance: ICloudInstance) {
+        onlineInstances[cloudInstance.name] = cloudInstance
+        cloudInstance.start()
     }
 
-    override fun unregisterInstance(cloudInstance: ICloudInstance?) {
-        TODO("Not yet implemented")
+    override fun unregisterInstance(cloudInstance: ICloudInstance) {
+        cloudInstance.stop()
+        onlineInstances.remove(cloudInstance.name)
     }
 }

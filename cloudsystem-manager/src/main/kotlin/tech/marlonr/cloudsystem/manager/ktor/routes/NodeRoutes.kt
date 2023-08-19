@@ -23,6 +23,11 @@ fun Application.configureNodeRoutes() {
                         params.restToken
                     ))
                 }
+                post("/{name}/unregister") {
+                    val name = call.parameters["name"]
+
+                    CloudAPI.getInstance().cloudNodeProvider.unregisterNode(name!!)
+                }
             }
         }
     }

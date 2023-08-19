@@ -3,6 +3,7 @@ package tech.marlonr.cloudsystem.manager.instance
 import tech.marlonr.cloudsystem.api.group.ICloudGroup
 import tech.marlonr.cloudsystem.api.instance.ICloudInstance
 import tech.marlonr.cloudsystem.api.instance.IServerInfo
+import tech.marlonr.cloudsystem.api.instance.InstanceStatus
 import java.util.HashMap
 import java.util.concurrent.CompletableFuture
 
@@ -48,6 +49,10 @@ class CloudInstanceImpl(
     }
 
     override fun getServerInfo(): IServerInfo {
+        TODO("Not yet implemented")
+    }
+
+    override fun getInstanceStatus(): InstanceStatus {
         TODO("Not yet implemented")
     }
 

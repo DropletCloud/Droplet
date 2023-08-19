@@ -5,6 +5,7 @@ import tech.marlonr.cloudsystem.api.group.ICloudGroupProvider
 import tech.marlonr.cloudsystem.api.instance.ICloudInstanceProvider
 import tech.marlonr.cloudsystem.api.node.ICloudNodeProvider
 import tech.marlonr.cloudsystem.api.player.ICloudPlayerProvider
+import tech.marlonr.cloudsystem.node.player.CloudPlayerProviderImpl
 
 class ApiAdapter: CloudAPI() {
 
@@ -17,7 +18,7 @@ class ApiAdapter: CloudAPI() {
     }
 
     override fun getCloudPlayerProvider(): ICloudPlayerProvider {
-        TODO("Not yet implemented")
+        return CloudPlayerProviderImpl()
     }
 
     override fun getCloudNodeProvider(): ICloudNodeProvider {

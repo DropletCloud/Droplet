@@ -31,7 +31,7 @@ object CloudConfigManager {
                 .map(charPool::get)
                 .joinToString("")
 
-            file.writeText(json.encodeToString(CloudConfig(8080, "user", randomStringByJavaRandom())))
+            file.writeText(json.encodeToString(CloudConfig("127.0.0.1", 8080, "user", randomStringByJavaRandom())))
         }
 
         config = json.decodeFromString<CloudConfig>(file.readText())

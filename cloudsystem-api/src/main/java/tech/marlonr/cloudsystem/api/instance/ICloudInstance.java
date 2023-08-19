@@ -17,6 +17,7 @@ public interface ICloudInstance {
     CompletableFuture<@Nullable ICloudGroup> getGroupAsync();
     HashMap<String, String> getCustomProperties();
     IServerInfo getServerInfo();
+    InstanceStatus getInstanceStatus();
 
     void start();
     void stop();

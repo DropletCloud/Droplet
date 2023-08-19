@@ -21,6 +21,7 @@ object NodeConfigManager {
             file.createNewFile()
 
             file.writeText(json.encodeToString(NodeConfig(
+                nodeName = "Node-1",
                 managerCommunicationRestBaseUrl = "https://localhost:8080",
                 managerCommunicationRestUser = "user",
                 managerCommunicationRestToken = "pwhere",

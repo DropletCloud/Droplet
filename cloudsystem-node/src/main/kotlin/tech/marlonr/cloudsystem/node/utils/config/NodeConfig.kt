@@ -4,6 +4,7 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class NodeConfig(
+    val nodeName: String,
     val managerCommunicationRestBaseUrl: String,
     val managerCommunicationRestUser: String,
     val managerCommunicationRestToken: String,

@@ -6,11 +6,12 @@ import kotlinx.coroutines.launch
 import tech.marlonr.cloudsystem.api.node.ICloudNode
 import tech.marlonr.cloudsystem.api.node.ICloudNodeProvider
 import tech.marlonr.cloudsystem.library.kotlin.ktor.params.RegisterNodeParams
+import tech.marlonr.cloudsystem.node.utils.config.NodeConfigManager
 import tech.marlonr.cloudsystem.node.utils.managerHttpClient
 import tech.marlonr.cloudsystem.node.utils.scope
 
 class CloudNodeProviderImpl: ICloudNodeProvider {
-    val baseUrl = "https://localhost:8080" // TODO: variable in config file
+    val baseUrl = NodeConfigManager.getConfig().managerCommunicationRestBaseUrl
 
     override fun getOnlineNodes(): MutableList<ICloudNode> {
         TODO("Not yet implemented")

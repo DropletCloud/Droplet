@@ -29,12 +29,6 @@ class CloudGroupRepositoryImpl : ICloudGroupRepository {
 
         if (!file.exists()) {
             file.createNewFile()
-
-            val serialModule = SerializersModule {
-                polymorphic(ICloudGroup::class) {
-                }
-            }
-
             file.writeText(json.encodeToString(CloudGroupImpl(group.name, group.minOnlineCount)))
         }
         return json.decodeFromString<CloudGroupImpl>(file.readText())

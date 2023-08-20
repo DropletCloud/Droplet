@@ -11,19 +11,13 @@ import tech.marlonr.cloudsystem.node.utils.managerHttpClient
 import tech.marlonr.cloudsystem.node.utils.scope
 
 class CloudNodeProviderImpl: ICloudNodeProvider {
-    val baseUrl = NodeConfigManager.getConfig().managerCommunicationRestBaseUrl
 
     override fun getOnlineNodes(): MutableList<ICloudNode> {
         TODO("Not yet implemented")
     }
 
     override fun registerNode(node: ICloudNode) {
-        scope.launch {
-            managerHttpClient.post("$baseUrl/node/register") {
-                contentType(ContentType.Application.Json)
-                setBody(RegisterNodeParams(node.name, node.address, node.restCommunicationPort, node.restUserName, node.restToken))
-            }
-        }
+        TODO("Not yet implemented")
     }
 
     override fun unregisterNode(node: ICloudNode) {

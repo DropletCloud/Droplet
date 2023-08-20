@@ -2,11 +2,22 @@ package tech.marlonr.cloudsystem.manager
 
 import tech.marlonr.cloudsystem.manager.ktor.KtorService
 import tech.marlonr.cloudsystem.manager.utils.config.CloudConfigManager
+import kotlin.concurrent.thread
 
-fun main() {
-    val ktorService = KtorService(CloudConfigManager.getConfig().communicationRestServiceHost, CloudConfigManager.getConfig().communicationRestServicePort)
+object Application {
+    private val ktorService = KtorService(CloudConfigManager.getConfig().communicationRestServiceHost, CloudConfigManager.getConfig().communicationRestServicePort)
 
-    ApiAdapter() // set instance for `CloudAPI`
+    @JvmStatic
+    fun main(args: Array<String>) {
+        ApiAdapter() // set instance for `CloudAPI`
 
-    ktorService.start()
+        // SHUTDOWN HOOK
+        Runtime.getRuntime().addShutdownHook(shutdown())
+
+        ktorService.start()
+    }
+
+    private fun shutdown(): Thread = thread {
+        ktorService.stop()
+    }
 }

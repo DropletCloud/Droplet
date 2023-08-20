@@ -1,5 +1,5 @@
 [![Compile](https://github.com/DinoMarlir/cloudsystem-v2/actions/workflows/gradle.yml/badge.svg)](https://github.com/DinoMarlir/cloudsystem-v2/actions/workflows/gradle.yml)
-# CloudSystem
+# CloudSystem ☁️
 A simple cloudsystem written in Kotlin and Java
 
 # TODO
@@ -11,5 +11,8 @@ A simple cloudsystem written in Kotlin and Java
 - [ ] Instance Bridge (communication beetween manager and instances)
 - [ ] Rest-API
 
+# API
+Javadocs are in progress, the API currently isn't implemented
+
 ## special thanks
-[HttxMarco (link to YouTube)](https://youtube.com/@HttxMarco)
+- [HttxMarco (link to YouTube)](https://youtube.com/@HttxMarco)

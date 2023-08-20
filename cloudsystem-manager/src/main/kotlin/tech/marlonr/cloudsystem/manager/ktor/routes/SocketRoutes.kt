@@ -14,6 +14,8 @@ fun Application.configureSocketRoutes() {
     }
 }
 
-private fun extractAction(message: String) {
+private inline fun <reified T> extractAction(message: String): Pair<String, T> {
     val deserializedMessage: ISocketMessage = json.decodeFromString<SocketMessageImpl>(message)
+
+    return Pair(deserializedMessage.name, json.decodeFromString<T>(deserializedMessage.content))
 }

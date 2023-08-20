@@ -14,5 +14,5 @@ A simple cloudsystem written in Kotlin and Java
 # API
 Javadocs are in progress, the API currently isn't implemented
 
-## special thanks
+# special thanks
 - [HttxMarco (link to YouTube)](https://youtube.com/@HttxMarco)

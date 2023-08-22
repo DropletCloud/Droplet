@@ -2,6 +2,7 @@ package tech.marlonr.cloudsystem.manager
 
 import tech.marlonr.cloudsystem.manager.ktor.KtorService
 import tech.marlonr.cloudsystem.manager.utils.config.CloudConfigManager
+import tech.marlonr.cloudsystem.manager.utils.logger
 import kotlin.concurrent.thread
 
 object Application {
@@ -9,10 +10,11 @@ object Application {
 
     @JvmStatic
     fun main(args: Array<String>) {
+        logger.success("Welcome to the CloudSystem!")
         ApiAdapter() // set instance for `CloudAPI`
 
         // SHUTDOWN HOOK
-        Runtime.getRuntime().addShutdownHook(shutdown())
+        //TODO: fix error Runtime.getRuntime().addShutdownHook(shutdown())
 
         ktorService.start()
     }

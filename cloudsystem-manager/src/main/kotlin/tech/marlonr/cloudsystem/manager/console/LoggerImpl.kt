@@ -11,7 +11,7 @@ class LoggerImpl: ILogger {
         return "${TextStyles.bold("${TextColors.brightRed("manager")}${TextColors.gray("@")}${TextColors.brightCyan("cloudsystem")}")} ${TextColors.gray("»")}"
     }
 
-    override fun log(message: String) {
+    override fun info(message: String) {
         print("\r")
         println("$prefix ${TextColors.brightMagenta("LOG")} – $message")
         print("\n")
@@ -20,21 +20,21 @@ class LoggerImpl: ILogger {
 
     override fun success(message: String) {
         print("\r")
-        print("$prefix ${TextColors.brightGreen("SUCCESS")} – $message")
+        print("$prefix ${TextColors.brightGreen("SUCCESS")} – ${TextColors.green(message)}")
         print("\n")
         sendPrompt()
     }
 
     override fun warning(message: String) {
         print("\r")
-        println("$prefix ${TextColors.brightYellow("SUCCESS")} – $message")
+        println("$prefix ${TextColors.brightYellow("WARNING")} – ${TextColors.yellow(message)}")
         print("\n")
         sendPrompt()
     }
 
     override fun error(message: String) {
         print("\r")
-        println("$prefix ${TextColors.brightRed("SUCCESS")} – $message")
+        println("$prefix ${TextColors.brightRed("ERROR")} – ${TextColors.red(message)}")
         print("\n")
         sendPrompt()
     }

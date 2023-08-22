@@ -18,8 +18,7 @@ class InputHandlerImpl(private val logger: ILogger): IInputHandler {
                     runCatching {
                         handleCommandInput(readln())
                     }.onFailure {
-                        it.printStackTrace()
-                        logger.sendPrompt()
+                        logger.error(it.stackTraceToString())
                     }
                 }
             }

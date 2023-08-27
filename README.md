@@ -2,6 +2,24 @@
 # CloudSystem ☁️
 A simple cloudsystem written in Kotlin and Java
 
+# Supported Platforms
+## Proxies
+- Velocity 🔴
+- Waterfall 🔴
+
+## Bukkit
+- Paper 🔴
+- Folia 🔴
+- Purpur 🔴
+
+## Modded
+- Sponge 🔴
+- Fabric 🔴
+- Quilt 🔴
+- Forge 🔴
+- NeoForge 🔴
+- LegacyFabric 🔴
+
 # TODO
 - [ ] Manager - Node Communication
 - [ ] Instances

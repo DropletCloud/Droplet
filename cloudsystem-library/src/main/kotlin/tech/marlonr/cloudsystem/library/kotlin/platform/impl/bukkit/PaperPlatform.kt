@@ -1,4 +1,4 @@
-package tech.marlonr.cloudsystem.library.kotlin.platform.impl
+package tech.marlonr.cloudsystem.library.kotlin.platform.impl.bukkit
 
 import io.ktor.client.*
 import io.ktor.client.call.*
@@ -14,8 +14,7 @@ import java.nio.file.Path
 
 class PaperPlatform(private val httpClient: HttpClient): IPlatform {
     override val name = "Paper"
-    override val jarNamePattern: String
-        get() = TODO("Not yet implemented")
+    override val jarNamePattern = "paper-\$mcVersion-\$build.jar"
     override val type = PlatformType.PAPER_SERVER
     override val addonType = AddonType.PAPER_PLUGIN
 

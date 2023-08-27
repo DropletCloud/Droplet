@@ -13,6 +13,9 @@ repositories {
 dependencies {
     implementation(project(":cloudsystem-api"))
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0-RC")
+    implementation("io.ktor:ktor-client-core:2.3.3")
+    implementation("io.ktor:ktor-client-cio:2.3.3")
+    implementation("io.ktor:ktor-client-cio-jvm:2.3.3")
 
     testImplementation(kotlin("test"))
 }

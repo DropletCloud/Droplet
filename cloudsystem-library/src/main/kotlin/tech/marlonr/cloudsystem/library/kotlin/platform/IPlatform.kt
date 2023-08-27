@@ -2,6 +2,7 @@ package tech.marlonr.cloudsystem.library.kotlin.platform
 
 import java.nio.file.Path
 
+// @author https://github.com/mooziii
 interface IPlatform {
 
     val name: String

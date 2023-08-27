@@ -15,7 +15,7 @@ A simple cloudsystem written in Kotlin and Java
 Javadocs are in progress, the API currently isn't implemented
 
 # Modules
-- [ ] Rest-API (see #4)[https://github.com/DinoMarlir/cloudsystem-v2/issues/4]
+- [ ] Rest-API [see #4](https://github.com/DinoMarlir/cloudsystem-v2/issues/4)
 - [ ] Notifications (ingame message if instances are starting/stopping)
 - [ ] Discord Webhook (as like `Notifications` but in Discord)
 - [ ] Tablist and MOTD Module

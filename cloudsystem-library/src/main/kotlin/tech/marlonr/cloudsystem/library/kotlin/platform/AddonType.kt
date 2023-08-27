@@ -6,5 +6,6 @@ enum class AddonType {
     FORGE_MOD,
     SPONGE_MOD,
     VELOCITY_PLUGIN,
+    BUNGEECORD_PLUGIN,
     WATERFALL_PLUGIN
 }

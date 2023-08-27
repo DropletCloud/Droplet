@@ -7,7 +7,6 @@ interface IPlatform {
     val name: String
     val jarNamePattern: String
     val type: PlatformType
-        get() = false
     val addonFolder: String?
         get() = null
     val spigotBased: Boolean

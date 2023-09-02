@@ -22,7 +22,7 @@ public interface ICloudGroupProvider {
 
     /**
      * @param name name of the group
-     * @return {@link CompletableFuture<ICloudGroup>}
+     * @return {@link CompletableFuture}
      */
     CompletableFuture<ICloudGroup> getGroupByNameAsync(@NotNull String name);
 

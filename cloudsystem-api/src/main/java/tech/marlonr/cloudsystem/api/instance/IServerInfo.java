@@ -5,7 +5,7 @@ package tech.marlonr.cloudsystem.api.instance;
  */
 public interface IServerInfo {
     /**
-     * amount of online players
+     * @return amount of online players
      */
     int getOnlinePlayers();
 }

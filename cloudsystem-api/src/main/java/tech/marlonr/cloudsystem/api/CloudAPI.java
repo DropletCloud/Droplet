@@ -11,6 +11,10 @@ import tech.marlonr.cloudsystem.api.player.ICloudPlayerProvider;
 public abstract class CloudAPI {
     private static CloudAPI instance;
 
+
+    /**
+     * constructor for {@link CloudAPI}
+     */
     public CloudAPI() {
         instance = this;
     }

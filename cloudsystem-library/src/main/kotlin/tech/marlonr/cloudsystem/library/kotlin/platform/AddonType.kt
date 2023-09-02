@@ -1,11 +1,10 @@
 package tech.marlonr.cloudsystem.library.kotlin.platform
 
-enum class AddonType {
-    PAPER_PLUGIN,
-    FABRIC_MOD,
-    FORGE_MOD,
-    SPONGE_MOD,
-    VELOCITY_PLUGIN,
-    BUNGEECORD_PLUGIN,
-    WATERFALL_PLUGIN
+enum class AddonType(addonFolder: String) {
+    PAPER_PLUGIN("plugins"),
+    FABRIC_MOD("mods"),
+    FORGE_MOD("mods"),
+    SPONGE_MOD("mods"),
+    VELOCITY_PLUGIN("plugins"),
+    BUNGEECORD_PLUGIN("plugins")
 }

@@ -41,7 +41,7 @@ public interface ICloudInstance {
     @Nullable ICloudGroup getGroup();
 
     /**
-     * @return the group as {@link CompletableFuture<ICloudGroup>}
+     * @return the group as {@link CompletableFuture}
      */
     CompletableFuture<@Nullable ICloudGroup> getGroupAsync();
 

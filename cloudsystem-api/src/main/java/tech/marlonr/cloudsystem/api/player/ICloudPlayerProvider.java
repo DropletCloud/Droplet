@@ -23,13 +23,13 @@ public interface ICloudPlayerProvider {
     ICloudPlayer getCloudPlayerByUUID(@NotNull UUID uuid);
 
     /**
-     * @return all online cloud players as {@link CompletableFuture<List<ICloudPlayer>>}
+     * @return all online cloud players as {@link CompletableFuture}
      */
     CompletableFuture<List<ICloudPlayer>> getOnlinePlayersAsync();
 
     /**
      * @param uuid uuid of the player
-     * @return {@link CompletableFuture<ICloudPlayer>}
+     * @return {@link CompletableFuture}
      */
     CompletableFuture<ICloudPlayer> getCloudPlayerByUUIDAsync(@NotNull UUID uuid);
 

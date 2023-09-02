@@ -31,12 +31,12 @@ public interface ICloudPlayer {
     ICloudInstance getCurrentServer();
 
     /**
-     * @return current proxy of the Minecraft player as {@link CompletableFuture<ICloudPlayer>}
+     * @return current proxy of the Minecraft player as {@link CompletableFuture}
      */
     CompletableFuture<ICloudInstance> getCurrentProxyAsync();
 
     /**
-     * @return current server of the Minecraft player as {@link CompletableFuture<ICloudInstance>}
+     * @return current server of the Minecraft player as {@link CompletableFuture}
      */
     CompletableFuture<ICloudInstance> getCurrentServerAsync();
 

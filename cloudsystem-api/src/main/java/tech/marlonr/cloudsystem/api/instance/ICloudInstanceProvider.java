@@ -18,7 +18,7 @@ public interface ICloudInstanceProvider {
 
     /**
      * @param name name of the instance
-     * @return The instance as {@link CompletableFuture<ICloudInstance>}
+     * @return The instance as {@link CompletableFuture}
      */
     CompletableFuture<ICloudInstance> getInstanceByNameAsync(String name);
 
@@ -28,7 +28,7 @@ public interface ICloudInstanceProvider {
     List<ICloudInstance> getInstances();
 
     /**
-     * @return all registered instances as {@link CompletableFuture<List<ICloudInstance>>}
+     * @return all registered instances as {@link CompletableFuture}
      */
     CompletableFuture<List<ICloudInstance>> getInstancesAsync();
 

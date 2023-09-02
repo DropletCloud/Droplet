@@ -36,7 +36,7 @@ jobs:
       - name: 'Validate Gradle Wrapper'
         uses: gradle/wrapper-validation-action@v1
       - name: 'Build'
-        run: ./gradlew cloudsystem-api:javadoc
+        run: ./gradlew cloudsystem-api:javadoc --continue
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact

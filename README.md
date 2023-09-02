@@ -12,7 +12,7 @@ A simple cloudsystem written in Kotlin and Java
 - [ ] Rest-API
 
 # API
-Javadocs are in progress, the API currently isn't implemented
+Javadocs are done, the API currently isn't implemented
 
 # Modules
 - [ ] Rest-API [(see #4)](https://github.com/DinoMarlir/cloudsystem-v2/issues/4)

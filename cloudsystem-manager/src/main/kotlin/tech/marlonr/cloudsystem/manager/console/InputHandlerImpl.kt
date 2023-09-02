@@ -1,13 +1,14 @@
 package tech.marlonr.cloudsystem.manager.console
 
 import com.mojang.brigadier.CommandDispatcher
+import com.mojang.brigadier.exceptions.CommandSyntaxException
 import kotlinx.coroutines.launch
 import tech.marlonr.cloudsystem.manager.console.interfaces.IInputHandler
 import tech.marlonr.cloudsystem.manager.console.interfaces.ILogger
 import tech.marlonr.cloudsystem.manager.utils.scope
 
 class InputHandlerImpl(private val logger: ILogger): IInputHandler {
-    val dispatcher = CommandDispatcher<String>()
+    private val dispatcher = CommandDispatcher<String>()
 
     override var commandInputEnabled = true
 
@@ -18,7 +19,12 @@ class InputHandlerImpl(private val logger: ILogger): IInputHandler {
                     runCatching {
                         handleCommandInput(readln())
                     }.onFailure {
-                        logger.error(it.stackTraceToString())
+                        if (it is CommandSyntaxException) {
+                            logger.error(if (it.message == null) "" else it.message!!)
+                            return@onFailure
+                        } else {
+                            logger.error(it.stackTraceToString())
+                        }
                     }
                 }
             }
@@ -27,5 +33,9 @@ class InputHandlerImpl(private val logger: ILogger): IInputHandler {
 
     override fun handleCommandInput(input: String) {
         dispatcher.execute(input, "console")
+    }
+
+    override fun getDispatcher(): CommandDispatcher<String> {
+        return dispatcher
     }
 }

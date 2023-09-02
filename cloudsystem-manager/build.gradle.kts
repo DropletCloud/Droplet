@@ -1,6 +1,7 @@
 plugins {
     kotlin("jvm") version "1.9.0"
     kotlin("plugin.serialization") version "1.9.0"
+    id("com.github.johnrengelman.shadow") version "8.1.1"
 }
 
 group = "tech.marlonr"
@@ -33,14 +34,23 @@ dependencies {
     implementation("io.ktor:ktor-server-call-logging-jvm:2.3.3")
     implementation("io.ktor:ktor-server-websockets-jvm:2.3.3")
 
-
     testImplementation(kotlin("test"))
-}
-
-tasks.test {
-    useJUnitPlatform()
 }
 
 kotlin {
     jvmToolchain(17)
+}
+
+tasks {
+    test {
+        useJUnitPlatform()
+    }
+
+    shadowJar {
+        manifest {
+            attributes(
+                "Main-Class" to "tech.marlonr.cloudsystem.manager.Application"
+            )
+        }
+    }
 }

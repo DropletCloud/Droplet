@@ -5,7 +5,7 @@ import com.github.ajalt.mordant.rendering.TextStyles
 import tech.marlonr.cloudsystem.manager.console.interfaces.ILogger
 
 class LoggerImpl: ILogger {
-    private val prefix = "${TextStyles.bold("${TextColors.brightCyan("Cloud")}${TextColors.brightWhite("System")}")} ${TextColors.gray("» ")}"
+    private val prefix = "${TextStyles.bold("${TextColors.brightCyan("Droplet")}${TextColors.brightWhite("Cloud")}")} ${TextColors.gray("» ")}"
 
     override fun getPrompt(): String {
         return "${TextStyles.bold("${TextColors.brightRed("manager")}${TextColors.gray("@")}${TextColors.brightCyan("cloudsystem")}")} ${TextColors.gray("»")}"

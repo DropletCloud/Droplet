@@ -16,7 +16,7 @@ object Application {
         // SHUTDOWN HOOK
         //TODO: fix error Runtime.getRuntime().addShutdownHook(shutdown())
 
-        logger.success("Welcome to the CloudSystem!")
+        logger.success("Welcome to DropletCloud!")
         console.getInputHandler().run()
 
         ktorService.start()

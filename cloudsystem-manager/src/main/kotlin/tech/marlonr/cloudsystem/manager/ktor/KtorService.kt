@@ -32,4 +32,5 @@ fun Application.module() {
 
     configureAuth()
     configureSocketRoutes()
+    configureSockets()
 }
